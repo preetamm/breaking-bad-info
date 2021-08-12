@@ -1,13 +1,83 @@
 
+
+$utilities: () !default;
+
 $theme-colors: (
     'black': black,
-    'secondary': #272727
+    'secondary': #272727,
+    'ternary': #141414
+);
+
+
+$font-sizes: (
+  44: 44px,
+  40: 40px,
+  28: 28px,
+  20: 20px,
+  16: 16px,
+  12: 12px,
 );
 
 $utilities: (
+  'height': (
+    property: height,
+    class: h,
+    values: (
+      0: 0,
+      1: 1rem,
+      2: 2rem,
+      3: 3rem,
+      40: 40px,
+      400: 400px
+    ),
+  ),
+  'width': (
+    property: width,
+    class: w,
+    values: (
+      0: 0,
+      60: 60%,
+      40: 40%,
+      250: 250px,
+    ),
+  ),
+  "viewport-height": (
+    property: height,
+    class: vh,
+    values: (80: 80vh, 100: 100vh)
+  ),
+  "viewport-width": (
+    property: width,
+    class: vw,
+    values: (60: 60vw, 40: 40vw)
+  ),
+  "min-height": (
+    property: min-height,
+    class: min-h,
+    values: (100vh: 100vh)
+  ),
+  "border-color": (
+      property: border-color,
+      class: border,
+      values: (
+        'primary': #7352FF,
+        'secondary': #A5A5A5
+      )
+    ),
+    "font-size": (
+      rfs: true,
+      property: font-size,
+      class: fs,
+      values: (
+        44: 44px,
+        40: 40px,
+        28: 28px,
+        20: 20px,
+        16: 16px,
+        12: 12px,
+      )
+    ),
+ 
 );
 
-
-
-
-@import "~bootstrap/scss/bootstrap";
+@import "~bootstrap/scss/bootstrap.scss";

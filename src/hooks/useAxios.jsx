@@ -20,7 +20,7 @@ const useAxios = (axiosParams) => {
     
     useEffect(() => {
         fetchData(axiosParams);
-    }, []); // execute once only
+    }, [axiosParams.url]); // execute once only
 
     return { response, error, loading };
 }

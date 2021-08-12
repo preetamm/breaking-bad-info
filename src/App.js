@@ -1,5 +1,5 @@
-import logo from './logo.svg';
-import { Link, BrowserRouter as Router, Route } from "react-router-dom";
+
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import './App.css';
 import './main.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';

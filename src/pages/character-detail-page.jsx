@@ -9,13 +9,9 @@ const CharacterDetailPage = ({ match }) => {
         params: { characterId },
     } = match;
 
-    const { characterList, setCharacterList } = useContext(CharacterListContext)
-    // console.log(id)
-    //console.log(JSON.parse(window.sessionStorage.getItem('characterList')))
+    const { characterList } = useContext(CharacterListContext)
     const targetCharacter = characterList.find((item) => {
-        //console.log([item.char_id, characterId])
-        //console.log()
-        return item.char_id == parseInt(characterId)
+        return item.char_id === parseInt(characterId)
     });
 
     console.log(characterList)

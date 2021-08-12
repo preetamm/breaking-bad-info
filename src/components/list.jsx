@@ -1,4 +1,4 @@
-import React, { useEffect, useContext, useState, useMemo, memo } from 'react'
+import React, {  useContext, useMemo, memo } from 'react'
 import CharacterListContext from '../context/CharacterList'
 import Api from '../data/api'
 import useAxios from '../hooks/useAxios'
@@ -6,7 +6,7 @@ import CharacterCard from './character-card'
 
 
 const List = ({ searchQuery }) => {
-    const {characterList, setCharacterList } = useContext(CharacterListContext)
+    const { setCharacterList } = useContext(CharacterListContext)
     const characterEndPoint = Api()
     let url;
     if (searchQuery.length) {
@@ -14,7 +14,7 @@ const List = ({ searchQuery }) => {
     } else {
         url = characterEndPoint.character().endPoint
     }
-    let { response, error, loading } = useAxios({ url: url })
+    let { response, loading } = useAxios({ url: url })
     if(response)  setCharacterList(response)
 
     return useMemo(() => {
@@ -27,7 +27,7 @@ const List = ({ searchQuery }) => {
                 ))}
             </div >
         )
-    }, [response,error, loading,searchQuery])
+    }, [response,loading])
 }
 
 export default memo(List)

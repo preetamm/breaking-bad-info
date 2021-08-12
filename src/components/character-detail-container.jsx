@@ -1,5 +1,4 @@
-import React, { Fragment, useContext, useEffect } from 'react'
-import CharacterListContext from '../context/CharacterList';
+import React, { Fragment } from 'react'
 import CharacterDetail from './chaarcter-detail';
 
 
@@ -9,7 +8,7 @@ const CharacterDetailContainer = ({ id, character }) => {
         <div className="character-detail-container vw-100 vh-100 d-flex">
             {character && ( <Fragment>
                 <div className="character-img-container vw-40 ">
-                    <img src={character.img}></img>
+                    <img src={character.img} alt=''></img>
                 </div>
                 <div className="character-detail-container vw-60 bg-ternary d-flex text-white align-items-center justify-content-center ">
                     <CharacterDetail detail={character}></CharacterDetail>

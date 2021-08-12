@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import CharacterCard from './character-card';
 import List from './list';
 
 

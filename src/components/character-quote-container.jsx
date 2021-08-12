@@ -4,7 +4,7 @@ import useAxios from '../hooks/useAxios';
 
 const CharacterQuoteContainer = ({ character }) => {
     const url = Api().quote().setAttibute('author', character.name).endPoint
-    let { response, error, loading } = useAxios({ url: url })
+    let { response, loading } = useAxios({ url: url })
     return useMemo(() => {
         return (
             <div className="character-quote-container  d-flex  vw-100 vh-100 bg-black text-white">
@@ -21,7 +21,7 @@ const CharacterQuoteContainer = ({ character }) => {
                 </div>
             </div>
         )
-    }, [response, error, loading])
+    }, [response, loading])
 }
 
 export default CharacterQuoteContainer;
